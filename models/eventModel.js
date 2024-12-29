@@ -40,7 +40,11 @@ const eventSchema = new Schema({
     type: String,
     enum: ['public', 'private'],
     default: 'public',
-  },    
+  },
+  category:{
+    type: String,
+    required: true,
+  } ,   
 }, {
   timestamps: true, // Automatically adds createdAt and updatedAt fields
 });

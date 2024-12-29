@@ -46,14 +46,14 @@ const getEventById = async (req, res) => {
 // Create a new event
 const createEvent = async (req, res) => {
   try {
-    const { title, description, date, category, address, eventType } = req.body;
+    const { title, description, date, category, address, visibility } = req.body;
     const newEvent = new Event({
       title,
       description,
       date,
       category,
       address,
-      eventType,
+      visibility,
       createdBy: req.user._id, // Assuming you are using JWT to set the user ID
     });
 

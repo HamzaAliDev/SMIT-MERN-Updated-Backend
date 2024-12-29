@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 const authVerify =  (req, res, next) => {   
     try{
         const token = req.headers.authorization;
+        // console.log(token)
         if (!token) {
             return res.status(401).json({
                 data: null,

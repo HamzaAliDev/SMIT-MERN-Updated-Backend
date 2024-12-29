@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const env = require('dotenv');
 const dbConnection = require('./config/db_connection');
 const userRouter = require('./routes/userRoutes');
+const eventRouter = require('./routes/eventRoutes');
 // const postRouter = require('./routes/postRoutes');
 
 
@@ -17,6 +18,7 @@ dbConnection();
 
 // routes
 app.use('/users',userRouter);
+app.use("/events",eventRouter)
 // app.use('/posts',postRouter);
 
 const PORT = process.env.PORT || 8080;
